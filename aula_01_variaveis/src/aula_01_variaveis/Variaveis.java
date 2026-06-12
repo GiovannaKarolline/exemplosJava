@@ -10,6 +10,8 @@ public class Variaveis {
 		float numero3, numero4;
 		float preenchida = 1.5f;
 		String nome;
+		char sexo;
+		
 		Scanner leia = new Scanner(System.in);
 		
 		System.out.println("Variável numero1 = "+ numero1);
@@ -23,5 +25,19 @@ public class Variaveis {
 		System.out.println("Digite o segundo valor real:");
 		numero4 = leia.nextFloat();
 		System.out.printf("%.2f * %.2f = %.2f", numero3, numero4, numero3*numero4);
+		System.out.println("\nDigite o sexo do bebê:");
+		sexo = leia.next().charAt(0);
+		sexo = Character.toLowerCase(sexo);
+		switch (sexo) {
+			case 'f':
+				System.out.println("Seu bebê é do sexo feminino!");
+				break;
+			case 'm':
+				System.out.println("Seu bebê é do sexo masculino!");
+				break;
+			default:
+				System.out.println("Não sabemos o sexo do seu bebê.");
+				break;
+		}
 	}
 }
