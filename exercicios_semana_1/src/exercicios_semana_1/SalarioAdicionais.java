@@ -19,7 +19,5 @@ public class SalarioAdicionais {
 		
 		salarioLiquido = salarioBruto + adicionalNoturno + (horasExtras*5) - descontos;
 		System.out.printf("\nO salário líquido é de R$ %.2f.", salarioLiquido);
-		
 	}
-
 }
