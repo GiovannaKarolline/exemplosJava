@@ -12,7 +12,7 @@ public class SalarioAdicionais {
 		salarioBruto = leia.nextFloat();
 		System.out.print("\nDigite o valor do adicional noturno: R$ ");
 		adicionalNoturno = leia.nextFloat();
-		System.out.print("\nDigite a quantidade de horas extras: ");
+		System.out.print("\nDigite o valor em horas extras: R$ ");
 		horasExtras = leia.nextFloat();
 		System.out.print("\nDigite o valor em descontos: R$ ");
 		descontos = leia.nextFloat();

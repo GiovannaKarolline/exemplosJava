@@ -23,7 +23,5 @@ public class MediaQuatroNotas {
 		mediaFinal = (nota1+nota2+nota3+nota4)/4;
 		
 		System.out.printf("\nA média final é de %.1f.", mediaFinal);
-		
 	}
-
 }
