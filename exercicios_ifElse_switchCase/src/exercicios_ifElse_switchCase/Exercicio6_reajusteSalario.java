@@ -21,6 +21,10 @@ public class Exercicio6_reajusteSalario {
 		nomeColaborador = leia.next();
 		System.out.println("Digite o código do cargo: ");
 		codigoCargo = leia.nextInt();
+		if(codigoCargo < 1 || codigoCargo > 6) {
+			System.out.println("Código inválido.");
+			return;
+		}
 		System.out.println("Digite o valor do salário atual: ");
 		salario = leia.nextFloat();
 		

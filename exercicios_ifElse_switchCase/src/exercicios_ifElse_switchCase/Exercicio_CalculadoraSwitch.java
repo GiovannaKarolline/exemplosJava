@@ -19,23 +19,24 @@ public class Exercicio_CalculadoraSwitch {
 		System.out.println("Digite o número da operação escolhida:");
 		operacao = leia.nextInt();
 		
-		if(operacao < 1 || operacao > 4) {
-			System.out.println("Operação inválida!");
-		}
-		
 		switch(operacao) {
-		case 1:
-			System.out.printf("\n%.1f + %.1f = %.1f",numeros[0],numeros[1],numeros[0] + numeros[1]);
-		case 2:
-			System.out.printf("\n%.1f - %.1f = %.1f",numeros[0],numeros[1],numeros[0] - numeros[1]);
-		case 3:
-			System.out.printf("\n%.1f x %.1f = %.1f",numeros[0],numeros[1],numeros[0] * numeros[1]);
-		case 4:
-			if(numeros[1] != 0.0) {
-				System.out.printf("\n%.1f ÷ %.1f = %.1f",numeros[0],numeros[1],numeros[0] / numeros[1]);
-			}
-		default:
-			break;
+			case 1:
+				System.out.printf("\n%.1f + %.1f = %.1f",numeros[0],numeros[1],numeros[0] + numeros[1]);
+				break;
+			case 2:
+				System.out.printf("\n%.1f - %.1f = %.1f",numeros[0],numeros[1],numeros[0] - numeros[1]);
+				break;
+			case 3:
+				System.out.printf("\n%.1f x %.1f = %.1f",numeros[0],numeros[1],numeros[0] * numeros[1]);
+				break;
+			case 4:
+				if(numeros[1] != 0.0) {
+					System.out.printf("\n%.1f ÷ %.1f = %.1f",numeros[0],numeros[1],numeros[0] / numeros[1]);
+					break;
+				}
+			default:
+				System.out.println("Operação inválida!");
+				break;
 		}
 	}
 
