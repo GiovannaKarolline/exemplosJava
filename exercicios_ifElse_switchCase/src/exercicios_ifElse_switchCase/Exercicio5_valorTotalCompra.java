@@ -16,7 +16,12 @@ public class Exercicio5_valorTotalCompra {
 		System.out.println("5 - Refrigerante - R$8,00\n");
 		System.out.println("6 - Suco de laranja - R$13,00\n");
 		System.out.println("Digite o código do produto escolhido: ");
+		
 		codigoProduto = leia.nextInt();
+		if(codigoProduto < 1 || codigoProduto > 6) {
+			System.out.println("Código inválido.");
+			return;
+		}
 		System.out.println("Digite a quantidade a ser comprada:");
 		quantidade = leia.nextInt();
 		

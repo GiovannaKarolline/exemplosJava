@@ -23,6 +23,7 @@ public class Exercicio4_qualOAnimal {
 				
 				if(caracteristicas[2].equalsIgnoreCase("hematófago")) {
 					System.out.println("O animal é uma pulga.");
+					
 				}else if(caracteristicas[2].equalsIgnoreCase("herbívoro")) {
 					System.out.println("O animal é uma lagarta.");
 				}
@@ -33,6 +34,7 @@ public class Exercicio4_qualOAnimal {
 				
 				if(caracteristicas[2].equalsIgnoreCase("hematófago")) {
 					System.out.println("O animal é uma sanguessuga.");
+					
 				}else if(caracteristicas[2].equalsIgnoreCase("Onívoro")) {
 					System.out.println("O animal é uma minhoca.");
 				}
@@ -47,6 +49,7 @@ public class Exercicio4_qualOAnimal {
 				
 				if(caracteristicas[2].equalsIgnoreCase("carnívoro")) {
 					System.out.println("O animal é uma águia.");
+					
 				}else if(caracteristicas[2].equalsIgnoreCase("onívoro")) {
 					System.out.println("O animal é uma pomba.");
 				}
@@ -57,6 +60,7 @@ public class Exercicio4_qualOAnimal {
 				
 				if(caracteristicas[2].equalsIgnoreCase("onívoro")) {
 					System.out.println("O animal é um homem.");
+					
 				}else if(caracteristicas[2].equalsIgnoreCase("herbívoro")) {
 					System.out.println("O animal é uma vaca.");
 				}
