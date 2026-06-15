@@ -40,6 +40,7 @@ public class Exercicio5_valorTotalCompra {
 				System.out.printf("Produto: Suco de laranja\nValor total: R$ %.2f",quantidade*13.0);
 				break;
 			default:
+				System.out.printf("Opção inválida.");
 				break;
 		}
 		
