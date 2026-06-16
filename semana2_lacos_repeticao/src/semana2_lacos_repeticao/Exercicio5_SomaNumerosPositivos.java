@@ -20,7 +20,7 @@ public class Exercicio5_SomaNumerosPositivos {
 		}while(numeroAtualESoma[0] != 0);
 		
 		System.out.printf("\nA soma dos números positivos é: %d", numeroAtualESoma[1]);
-		
+		//comentário
 		leia.close();
 	}
 }
