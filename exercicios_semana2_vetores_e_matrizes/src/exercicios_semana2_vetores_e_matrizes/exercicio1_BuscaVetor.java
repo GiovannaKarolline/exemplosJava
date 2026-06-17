@@ -1,6 +1,5 @@
 package exercicios_semana2_vetores_e_matrizes;
 
-import java.util.Arrays;
 import java.util.Scanner;
 
 public class exercicio1_BuscaVetor {
@@ -8,7 +7,7 @@ public class exercicio1_BuscaVetor {
 	
 	public static void main(String[] args) {
 		int[] dezInteiros = new int[10];
-		int inteiro = 0;
+		int[] inteiroEIndice = {0, -1};
 		
 		System.out.println("Busca de número inteiro em vetor");
 		
@@ -18,12 +17,18 @@ public class exercicio1_BuscaVetor {
 		}
 		
 		System.out.println("\nDigite o número que você deseja encontrar:");
-		inteiro = leia.nextInt();
+		inteiroEIndice[0] = leia.nextInt();
 		
-		if(Arrays.binarySearch(dezInteiros, inteiro) > -1) {
-			System.out.printf("\nO número foi encontrado no índice: %d", Arrays.binarySearch(dezInteiros, inteiro));
+		for(int i = 0; i < dezInteiros.length; i++) {
+			if(dezInteiros[i] == inteiroEIndice[0]) {
+				inteiroEIndice[1] = i;
+			}
+		}
+		
+		if(inteiroEIndice[1] > -1) {
+			System.out.printf("\nO número %d foi encontrado no índice: %d", inteiroEIndice[0], inteiroEIndice[1]);
 		}else {
-			System.out.printf("\nO número %d não foi encontrado!", inteiro);
+			System.out.printf("\nO número %d não foi encontrado!", inteiroEIndice[0]);
 		}
 		
 		leia.close();
