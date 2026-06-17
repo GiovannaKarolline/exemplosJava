@@ -2,7 +2,8 @@ package exercicios_semana2_vetores_e_matrizes;
 
 import java.util.Scanner;
 
-public class exercicio1_BuscaVetor {
+public class Exercicio1_BuscaVetor {
+	
 	public static Scanner leia = new Scanner(System.in);
 	
 	public static void main(String[] args) {
