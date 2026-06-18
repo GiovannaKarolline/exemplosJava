@@ -9,8 +9,9 @@ public class Exercicio2_EstatisticasVetor {
 	public static void main(String[] args) {
 		int[] dezInteiros = new int[10];
 		int[] elementosIndicesImpares = new int[5];
-		int[] elementosParesEIndice = new int[11];
+		int[] elementosParesEIndice = {-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0};
 		int soma = 0;
+		int contador = 0;
 		float media = 0.0f;
 		
 		System.out.println("Crie um vetor e veja algumas estatísticas sobre ele");
@@ -26,25 +27,29 @@ public class Exercicio2_EstatisticasVetor {
 			soma += dezInteiros[i];
 		}
 		
-		for(int item : elementosIndicesImpares) {
-			for(int j = 1; j < dezInteiros.length; j+=2) {
-				item = dezInteiros[j];
-				System.out.printf("\n%d ", item);
+		for(int i = 0; i < dezInteiros.length; i++) {
+			if(!(i % 2 == 0)) {
+				elementosIndicesImpares[contador] = dezInteiros[i];
+				contador++;
 			}
 		}
 		
-		
 		media = soma/dezInteiros.length;
 		
-		System.out.println("\nElementos nos índices ímpares:\n");
+		System.out.println("\nElementos nos índices ímpares:");
 		for(int item : elementosIndicesImpares) {
 			System.out.printf("%d ", item);
 		}
 		
-		System.out.printf("\nCrie um vetor e veja algumas estatísticas sobre ele");
-		System.out.printf("\nCrie um vetor e veja algumas estatísticas sobre ele");
+		System.out.printf("\nElementos pares do vetor:\n");
+		for(int i = 0; i < elementosParesEIndice.length - 1; i++) {
+			if(elementosParesEIndice[i] != -1) {
+				System.out.printf("%d ", elementosParesEIndice[i]);
+			}
+		}
+		System.out.printf("\nSoma:\n%d", soma);
+		System.out.printf("\nMédia:\n%.1f", media);
 		
-
+		leia.close();
 	}
-
 }
