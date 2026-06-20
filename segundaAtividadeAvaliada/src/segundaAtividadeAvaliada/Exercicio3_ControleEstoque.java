@@ -42,7 +42,7 @@ public class Exercicio3_ControleEstoque {
 		
 	}
 	
-	                public static void atualizarProduto2(List<Produto> produtos, Scanner leia) {
+        public static void atualizarProduto2(List<Produto> produtos, Scanner leia) {
                 int resposta = 0;
                 Produto produtoAtualizado;
                 for(Produto produto: produtos) {
@@ -57,6 +57,12 @@ public class Exercicio3_ControleEstoque {
                 produtoAtualizado = produtos.get(resposta); // pega pelo indice
                 System.out.println("Digite a nova quantidade do produto");
                 produtoAtualizado.quantidade = leia.nextInt();
+                leia.nextLine();
+                listarProdutos(produtos);
+                System.out.println("Pressione enter para continuar");
+                leia.nextLine();
+
+        }
 	
 	public static void main(String[] args) {
 		List<Produto> produtos = new ArrayList<>();
