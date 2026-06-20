@@ -41,9 +41,9 @@ public class Exercicio2_CadastroAluno {
 	public static void listarAlunos(List<Aluno> alunos) {
 		if(alunos.size() > 0) {
 			int contador = 0;
-			System.out.println("\nAlunos:\n");
+			System.out.println("\nAlunos:");
 			for(Aluno aluno : alunos) {
-				System.out.printf("\n\n%dº aluno\n", ++contador);
+				System.out.printf("\n%dº aluno\n", ++contador);
 				System.out.printf("\nNome do aluno: %s", aluno.nome);
 				System.out.printf("\nIdade do aluno: %d", aluno.idade);
 				System.out.printf("\nNota final do aluno: %.1f\n", aluno.notaFinal);
