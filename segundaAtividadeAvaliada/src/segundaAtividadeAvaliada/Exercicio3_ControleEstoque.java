@@ -42,38 +42,38 @@ public class Exercicio3_ControleEstoque {
 		
 	}
 	
-	public static void atualizarProduto(List<Produto> produtos) {
-		int contador = 0;
-		int resposta = 0;
-		
-		String[] produtosRegistrados = new String[produtos.size()];
-		
-		if(produtos.size() > 0) {
-			Map<Integer, String> opcoesDeProdutos = new HashMap<>();
-			System.out.println("\nVocê deseja atualizar a quantidade de qual produto?");
-			
-			for(Produto produto : produtos) {
-				System.out.printf("%d - %s (quantidade atual: %d)\n", ++contador, produto.nomeProduto, produto.quantidade);
-				opcoesDeProdutos.put(contador, produto.nomeProduto);
-			}
-			
-			resposta = leia.nextInt();
-			
-			if(resposta < produtos.size() && resposta > -1) {
-				resposta = produtos.indexOf(opcoesDeProdutos.get(resposta));
-				Produto produto = produtos.get(produtos.indexOf(resposta));
-				
-				System.out.printf("\nDigite a nova quantidade do produto %s:", produto.nomeProduto);
-				produto.quantidade = leia.nextInt();
-				
-				System.out.println("Produto atualizado!");
-			}else {
-				System.out.println("\nEscolha inválida!\n");
-			}
-		}else {
-			System.out.println("\nNenhum produto registrado! Não é possível atualizar.");
-		}
-	}
+	        public static void atualizarProduto(List<Produto> produtos) {
+                int contador = 0;
+                int resposta = 0;
+
+                String[] produtosRegistrados = new String[produtos.size()];
+
+                if(produtos.size() > 0) {
+                        Map<Integer, String> opcoesDeProdutos = new HashMap<>();
+                        System.out.println("\nVocê deseja atualizar a quantidade de qual produto?");
+
+                        for(Produto produto : produtos) {
+                                System.out.printf("%d - %s (quantidade atual: %d)\n", ++contador, produto.nomeProduto, produto.quantidade);
+                                opcoesDeProdutos.put(contador, produto.nomeProduto);
+                        }
+
+                        resposta = leia.nextInt();
+
+                        if(resposta < produtos.size() && resposta > -1) {
+                                resposta = produtos.indexOf(opcoesDeProdutos.get(resposta));
+                                Produto produto = produtos.get(produtos.indexOf(resposta));
+
+                                System.out.printf("\nDigite a nova quantidade do produto %s:", produto.nomeProduto);
+                                produto.quantidade = leia.nextInt();
+
+                                System.out.println("Produto atualizado!");
+                        }else {
+                                System.out.println("\nEscolha inválida!\n");
+                        }
+                }else {
+                        System.out.println("\nNenhum produto registrado! Não é possível atualizar.");
+                }
+        }
 	
 	public static void main(String[] args) {
 		List<Produto> produtos = new ArrayList<>();
