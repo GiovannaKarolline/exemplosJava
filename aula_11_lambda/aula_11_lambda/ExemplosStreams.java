@@ -1,0 +1,51 @@
+package aula_11_lambda;
+
+import java.util.Arrays;
+import java.util.Comparator;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class ExemplosStreams {
+	public static void main(String[] args) {
+		/*
+		 * uma Stream não armazena dados, apenas processa
+		 * A Stream não é uma estrutura de dados, ela manipula apenas
+		 * possui operações intermediárias (filtragens) e terminais (retorno)
+		 * são consumíveis (não reutilizadas)
+		 * processamento sequencial ou paralelo
+		 * não variáveis
+		 * iteração interna, percorre collections automaticamente
+		 * pode ter várias operações intermediárias mas apenas uma terminal
+		 * exemplos de intermediárias: filter(), distinct()
+		 * exemplos de terminais: collect(), forEach()
+		 * System.out::println mostra o que encontrar a cada iteração
+		 */		
+		
+		List<Integer> numeros = Arrays.asList(1,2,3,4,5,6,7,8,9,10);
+		 
+		List<Integer> numerosDesordenados = Arrays.asList(6,7,8,1,4,5,9,10,2,3);
+		 
+		List<String> estados = Arrays.asList("São Paulo", "Rio de Janeiro", "Minas Gerais","Espirito Santo", 
+		"São Paulo", "Rio de Janeiro", "Minas Gerais", "São Paulo", "Rio de Janeiro");
+		
+		List<Integer> numerosPares = numeros.stream().filter(numero -> numero % 2 == 0).collect(Collectors.toList());
+		
+		numerosPares.forEach(numero -> System.out.println(numero));
+		
+		//mostra todos os Estados que começam com R sem repetí-los
+		estados.stream().filter(estado -> estado.toUpperCase().startsWith("R")).distinct().forEach(System.out::println);
+		
+		//raiz cúbica de todos os números
+		List<Integer> numerosAoCubo = numeros.stream().map(numero -> (int) Math.pow(numero, 3)).collect(Collectors.toList());
+		
+		System.out.println("Números ao cubo: " + numerosAoCubo);
+		
+		//ordenando numeros
+		numerosDesordenados.stream().sorted(Comparator.reverseOrder()).forEach(System.out::println);
+		
+		//estados com a letra S
+		long totalEstadosIniciandoEmS = estados.stream().filter(estado -> estado.toUpperCase().startsWith("S")).distinct().count();
+		
+		System.out.println("Total de Estados que começam com a letra S: " + totalEstadosIniciandoEmS);
+	}
+}
